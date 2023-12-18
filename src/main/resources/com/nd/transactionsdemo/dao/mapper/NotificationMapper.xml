@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nd.transactionsdemo.dao.mapper.NotificationMapper">
+
+    <insert id="save">
+        insert into notification(id, message, create_at)
+        values (#{notification.id}, #{notification.message}, #{notification.createAt})
+    </insert>
+
+    <select id="findAll" resultType="com.nd.transactionsdemo.model.Notification">
+        select *
+        from notification;
+    </select>
+</mapper>
